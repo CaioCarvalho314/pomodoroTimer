@@ -9,10 +9,10 @@ export default function Header() {
       <img src={logoIgnite} alt="Logo do Ignite"></img>
       <nav>
         <NavLink to="/" title="Timer">
-          <Timer size={30} />
+          <Timer size={24} />
         </NavLink>
         <NavLink to="/history" title="Histórico">
-          <Scroll size={30} />
+          <Scroll size={24} />
         </NavLink>
       </nav>
     </HeaderContainer>
