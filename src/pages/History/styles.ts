@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const HistoryContainer = styled.main`
   flex: 1;
   padding: 3.5rem;
+
   display: flex;
   flex-direction: column;
 
@@ -56,16 +57,26 @@ export const HistoryList = styled.div`
   }
 `;
 
-export const Status = styled.span`
+const STATUS_COLORS = {
+  yellow: "yellow-500",
+  red: "red-500",
+  green: "green-500",
+};
+
+interface StatusProps {
+  statusColor: "yellow" | "red" | "green";
+}
+
+export const Status = styled.span<StatusProps>`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
   &::before {
     content: "";
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 9999px;
-    background-color: ${(props) => props.theme["yellow-500"]};
+    background-color: ${(props) =>
+      props.theme[STATUS_COLORS[props.statusColor]]};
   }
 `;
