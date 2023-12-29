@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 const BaseInput = styled.input`
   background: transparent;
   height: 2.5rem;
